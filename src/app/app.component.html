@@ -506,6 +506,74 @@
       <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
+
+  <div class="mat-display-2"> Autocompete 1:50</div>
+
+  <form>
+    <mat-form-field>
+      <input matInput type="text" [matAutocomplete]="auto" [formControl]="myControl">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filtredOptions | async" [value]="option">{{option}}</mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
+
+  <div class="mat-display-2"> Checkbox and radio button 2:00</div>
+
+  <div class="page">
+    <mat-checkbox color="primary" checked="true" labelPosition="before">text1</mat-checkbox><br>
+    <mat-checkbox color="accent" checked="true" labelPosition="before">text2</mat-checkbox><br>
+    <mat-checkbox color="warn" checked="true">text3</mat-checkbox>
+    <br>
+    <br>
+
+    <mat-radio-group [(ngModel)]="choosedRadio">
+      <mat-radio-button value="angular" color="primary" checked="true">Angular</mat-radio-button><br>
+      <mat-radio-button value="react" color="accent">React</mat-radio-button><br>
+      <mat-radio-button value="vue" color="warn">Vue</mat-radio-button>
+    </mat-radio-group>
+    <div>Valeur : {{choosedRadio}}</div>
+  </div>
+  <div class="mat-display-2"> Date picker 2:05</div>
+
+
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="myDatePicker" [(ngModel)]="datePicker" [min]="minDate" [max]="maxDate"
+      [matDatepickerFilter]="dateFilter">
+    <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+    <!-- <mat-datepicker #myDatePicker startView="year"></mat-datepicker> -->
+    <mat-datepicker #myDatePicker [startAt]="minDate"></mat-datepicker>
+  </mat-form-field>
+  <div>La date : {{datePicker}}</div>
+
+
+  <div class="mat-display-2"> Tooltip 2:11</div>
+
+  <button mat-raised-button matTooltip="Wellcome to CodeEvolution" matTooltipPosition="after"
+  matTooltipShowDelay="2000"
+  matTooltipHideDelay="2000"
+  >Hello</button>
+
+
+  <div class="mat-display-2"> Snackbar 2:15</div>
+
+  <div class="page">
+    <button mat-button (click)="openSnackBar('Item deleted', 'Undo')">Delete</button>
+    <button mat-button (click)="openCustumSnackBar()">Show cumtum SnackBar</button>
+  </div>
+  <div class="mat-display-2"> Dialog 2:24</div>
+  <div class="page">
+
+    <div class="page">
+      <button mat-mat-raised-button (click)="openDialog()">Open Dialog</button>
+    </div>
+
+  </div>
 </div>
 <br />---<br />
-<div class="mat-display-2"> Autocompete 1:50</div>
+<div class="mat-display-2"> Data Table 2:33</div>
+<div class="page">
+<app-datatable-exemple></app-datatable-exemple>
+</div>

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatIconModule, MatButtonToggleModule, MatBadgeModule, MatProgressSpinnerModule, MatProgressBarModule, MatToolbarModule, MatSidenavModule, MatMenuModule, MatListModule, MatDividerModule, MatGridListModule, MatExpansionModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule, MatTabsModule, MatStepperModule, MatSelectModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatButtonToggleModule, MatBadgeModule, MatProgressSpinnerModule, MatProgressBarModule, MatToolbarModule, MatSidenavModule, MatMenuModule, MatListModule, MatDividerModule, MatGridListModule, MatExpansionModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule, MatTabsModule, MatStepperModule, MatSelectModule, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatTooltipModule, MatSnackBarModule, MatDialogModule, MatTableModule } from '@angular/material';
 
 const MaterialComponents = [
   // CDK
@@ -14,15 +14,15 @@ const MaterialComponents = [
   // CdkTreeModule,
   // DragDropModule,
   // Material
-  // MatAutocompleteModule,
+  MatAutocompleteModule,
   MatBadgeModule,
   // MatBottomSheetModule,
   MatButtonToggleModule,
   MatCardModule,
-  // MatCheckboxModule,
+  MatCheckboxModule,
   // MatChipsModule,
   MatDatepickerModule,
-  // MatDialogModule,
+  MatDialogModule,
   MatDividerModule,
   MatExpansionModule,
   MatFormFieldModule,
@@ -35,19 +35,19 @@ const MaterialComponents = [
   // MatPaginatorModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
-  // MatRadioModule,
+  MatRadioModule,
   // MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
   // MatSliderModule,
   // MatSlideToggleModule,
-  // MatSnackBarModule,
+  MatSnackBarModule,
   // MatSortModule,
   MatStepperModule,
-  // MatTableModule,
+  MatTableModule,
   MatTabsModule,
   MatToolbarModule,
-  // MatTooltipModule,
+  MatTooltipModule,
   // MatTreeModule,
   MatButtonModule
 ]
