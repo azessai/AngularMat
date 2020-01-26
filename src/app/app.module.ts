@@ -9,13 +9,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_DATE_LOCALE } from '@angular/material';
 import { DialogExempleComponent } from './dialog-exemple/dialog-exemple.component';
 import { DatatableExempleComponent } from './datatable-exemple/datatable-exemple.component';
+import { TableAzComponent } from './table-az/table-az.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomSnackBarComponent,
     DialogExempleComponent,
-    DatatableExempleComponent
+    DatatableExempleComponent,
+    TableAzComponent
   ],
   entryComponents: [CustomSnackBarComponent, DialogExempleComponent],
   imports: [
@@ -24,7 +29,10 @@ import { DatatableExempleComponent } from './datatable-exemple/datatable-exemple
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'fr-FR' }],
   bootstrap: [AppComponent]

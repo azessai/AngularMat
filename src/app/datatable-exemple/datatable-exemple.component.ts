@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MatTableDataSource } from '@angular/material';
+import { ThrowStmt } from '@angular/compiler';
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -25,9 +28,25 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './datatable-exemple.component.html',
   styleUrls: ['./datatable-exemple.component.scss']
 })
-export class DatatableExempleComponent {
+export class DatatableExempleComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
+
+  ngOnInit() {
+    this.dataSource.filterPredicate = (data, filter: string): boolean => {
+      return data.name.toLowerCase().includes(filter);
+    };
+  }
+
+  logData(row) {
+
+    console.log('row : ', row);
+  }
+
+  applayFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
 
 }

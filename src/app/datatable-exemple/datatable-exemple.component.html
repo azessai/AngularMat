@@ -1,3 +1,7 @@
+<mat-form-field>
+  <input (keyup)="applayFilter($event.target.value)" matInput placeholder="filter">
+</mat-form-field>
+
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <!-- Position Column -->
   <ng-container matColumnDef="position">
@@ -20,7 +24,7 @@
   <!-- Symbol Column -->
   <ng-container matColumnDef="symbol">
     <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    <mat-cell (click)="logData(element.symbol)" *matCellDef="let element"> {{element.symbol}} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
