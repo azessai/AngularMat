@@ -6,7 +6,7 @@ import { AppComponent, CustomSnackBarComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MAT_DATE_LOCALE } from '@angular/material';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { DialogExempleComponent } from './dialog-exemple/dialog-exemple.component';
 import { DatatableExempleComponent } from './datatable-exemple/datatable-exemple.component';
 import { TableAzComponent } from './table-az/table-az.component';

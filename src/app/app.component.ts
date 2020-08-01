@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable, from } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { DateAdapter, MatSnackBar } from '@angular/material';
-import { MatDialog } from '@angular/material';
+import { DateAdapter } from '@angular/material/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogExempleComponent } from './dialog-exemple/dialog-exemple.component';
 
 @Component({
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit {
   opened = false;
   gSize = 0;
   intervalID: any;
-  panelOpenState: false;
+  panelOpenState = false;
   step = 0;
   selectedValue: number;
   items = [{ value: 'Angular' }, { value: 'React' }, { value: 'Vue' }];
