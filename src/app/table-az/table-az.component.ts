@@ -10,9 +10,9 @@ import { TableAzDataSource, TableAzItem } from './table-az-datasource';
   styleUrls: ['./table-az.component.scss']
 })
 export class TableAzComponent implements AfterViewInit, OnInit {
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatTable, {static: false}) table: MatTable<TableAzItem>;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatTable) table: MatTable<TableAzItem>;
   dataSource: TableAzDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
