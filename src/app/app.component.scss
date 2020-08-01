@@ -67,3 +67,14 @@ mat-card {
 mat-select {
   width: 130px;
 }
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid maroon;
+  box-sizing: border-box;
+  height: 100px;
+}
+.container {
+  height: 400px;
+}

@@ -216,6 +216,15 @@
     <mat-grid-tile>Tile 5</mat-grid-tile>
     <mat-grid-tile>Tile 6</mat-grid-tile>
   </mat-grid-list>
+<br>
+  <mat-grid-list cols=2 rowHeight="2:1">
+    <mat-grid-tile>
+      dsdsd
+    </mat-grid-tile>
+    <mat-grid-tile>
+sdsd
+    </mat-grid-tile>
+  </mat-grid-list>
 
   <mat-grid-list cols=2 rowHeight="fit" style="height: 200px" [gutterSize]="gSize +'px'">
     <mat-grid-tile>Tile 1</mat-grid-tile>
@@ -551,10 +560,8 @@
 
   <div class="mat-display-2"> Tooltip 2:11</div>
 
-  <button mat-raised-button matTooltip="Wellcome to CodeEvolution" matTooltipPosition="after"
-  matTooltipShowDelay="2000"
-  matTooltipHideDelay="2000"
-  >Hello</button>
+  <button mat-raised-button matTooltip="Wellcome to CodeEvolution" matTooltipPosition="after" matTooltipShowDelay="2000"
+    matTooltipHideDelay="2000">Hello</button>
 
 
   <div class="mat-display-2"> Snackbar 2:15</div>
@@ -571,10 +578,17 @@
     </div>
 
   </div>
+  <div class="mat-display-2"> Data Table 2:33</div>
+  <div class="page">
+    <!-- <app-table-az></app-table-az> -->
+    <app-datatable-exemple></app-datatable-exemple>
+  </div>
 </div>
 <br />---<br />
-<div class="mat-display-2"> Data Table 2:33</div>
+<div class="mat-display-2"> Virtual scrolling 2:58</div>
 <div class="page">
-<app-datatable-exemple></app-datatable-exemple>
-<!-- <app-table-az></app-table-az> -->
+  <cdk-virtual-scroll-viewport itemSize="100" class="container">
+
+    <div class="number" *cdkVirtualFor="let item of numbers">{{item}}</div>
+  </cdk-virtual-scroll-viewport>
 </div>

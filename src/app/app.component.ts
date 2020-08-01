@@ -46,8 +46,13 @@ export class AppComponent implements OnInit {
   minDate = new Date(2020, 0, 10);
   maxDate = new Date(2021, 0, 29);
   startDate = new Date(2020, 0, 15);
+  numbers = [];
+  constructor(private dateAdapter: DateAdapter<Date>, private snackBar: MatSnackBar, private dialog: MatDialog) {
 
-  constructor(private dateAdapter: DateAdapter<Date>, private snackBar: MatSnackBar, private dialog: MatDialog) {}
+    for (let index = 0; index < 1000; index++) {
+      this.numbers.push(index);
+    }
+  }
 
   submit() {
     console.log(this.sandwichForm.value);

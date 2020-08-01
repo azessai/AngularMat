@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatIconModule, MatButtonToggleModule, MatBadgeModule, MatProgressSpinnerModule, MatProgressBarModule, MatToolbarModule, MatSidenavModule, MatMenuModule, MatListModule, MatDividerModule, MatGridListModule, MatExpansionModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule, MatTabsModule, MatStepperModule, MatSelectModule, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatTooltipModule, MatSnackBarModule, MatDialogModule, MatTableModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatButtonToggleModule, MatBadgeModule, MatProgressSpinnerModule, MatProgressBarModule, MatToolbarModule, MatSidenavModule, MatMenuModule, MatListModule, MatDividerModule, MatGridListModule, MatExpansionModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule, MatTabsModule, MatStepperModule, MatSelectModule, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatTooltipModule, MatSnackBarModule, MatDialogModule, MatTableModule, MatSortModule, MatPaginatorModule } from '@angular/material';
 
 const MaterialComponents = [
   // CDK
@@ -32,7 +32,7 @@ const MaterialComponents = [
   MatListModule,
   MatMenuModule,
   MatNativeDateModule,
-  // MatPaginatorModule,
+  MatPaginatorModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
   MatRadioModule,
@@ -42,7 +42,7 @@ const MaterialComponents = [
   // MatSliderModule,
   // MatSlideToggleModule,
   MatSnackBarModule,
-  // MatSortModule,
+  MatSortModule,
   MatStepperModule,
   MatTableModule,
   MatTabsModule,
